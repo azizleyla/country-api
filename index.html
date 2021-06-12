@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Api</title>
+    <script src="https://kit.fontawesome.com/b04fed802b.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content container">
+            <h1 class="header__text">Where in the world?</h1>
+            <div class="header__mode">
+                <div class="header__mode-icon">
+                    <i class="fas fa-moon" id="mode"></i>
+                </div>
+                <p class="header__mode-text">Dark Mode</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="search">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input name="country" type="text" class="search-bar-input" id="search-input"
+                    placeholder="Search for country">
+            </div>
+
+            <select class="search-filter">
+                <option selected value="default">Filter By Region</option>
+                <option value="Americas">Americas</option>
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+        <div class="cards">
+            <!-- <div class="card">
+                <div class="card__img">
+                    <img src="images/german-flag.jpg">
+                </div>
+                <div class="card__content">
+                    <h1 class="card__name">Germany</h1>
+                    <div class="card__details">
+                        <p class="card__details--population">Population: <span>323,947,000</span></p>
+                        <p class="card__details--region">Region: <span>Americas</span></p>
+                        <p class="card__details--capital">Capital: <span>Washington, D.C.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        </div>
+
+        <script src="js/app.js"></script>
+</body>
+
+</html>

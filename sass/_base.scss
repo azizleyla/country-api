@@ -1,0 +1,32 @@
+:root {
+  --color-dark-blue: hsl(209, 23%, 22%);
+  --color-darkmode-blue: hsl(207, 26%, 17%);
+  --color-lightmode-blue: hsl(200, 15%, 8%);
+  --color-dark-gray: hsl(0, 0%, 52%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-lightmode-text: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+  background-color: #fafafa;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body.darkMode {
+  background-color: var(--color-darkmode-blue);
+  color: var(--color-lightmode-text);
+}

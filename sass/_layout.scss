@@ -1,0 +1,24 @@
+.container {
+  max-width: 115rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  @media (max-width: 776px) {
+    padding: 0 4rem;
+  }
+}
+.header {
+  background-color: var(--color-white);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  padding: 2rem 0;
+  color: var(--color-lightmode-blue);
+
+  &.darkMode {
+    background-color: var(--color-dark-blue);
+    color: var(--color-lightmode-text);
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 4rem;
+}
