@@ -71,7 +71,7 @@ const regions = [
     { name: "Africa" },
     { name: "Asia" },
     { name: "Europe" },
-    { name: "Oceaina" }
+    { name: "Oceania" }
 ];
 
 regions.forEach(region => {
