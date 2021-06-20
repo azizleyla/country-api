@@ -7,7 +7,7 @@ const modeIcon = document.getElementById('mode');
 const header = document.querySelector('header');
 const select = document.querySelector('.search-filter');
 const searchInput = document.getElementById('search-input');
-
+const modeText = document.querySelector('.header__mode-text')
 
 //Update UI
 function updateUI(countries, className) {
@@ -66,12 +66,27 @@ function filterData(countries) {
     }
 
 }
+const regions = [
+    { name: "Americas" },
+    { name: "Africa" },
+    { name: "Asia" },
+    { name: "Europe" },
+    { name: "Oceaina" }
+];
+
+regions.forEach(region => {
+    const option = document.createElement('option');
+    option.value = region.name;
+    option.textContent = region.name;
+    select.appendChild(option)
+})
+
 
 select.addEventListener('change', function () {
     const value = this.value;
     const filteredByRegion = countries.filter(item => item.region === value);
     // value === 'default' ? updateUI(countries) : updateUI(filteredByRegion);
-    if (value === "default") {
+    if (value === '0') {
         if (document.body.classList.contains('darkMode')) {
             updateUI(countries, 'darkMode');
         } else {
@@ -97,6 +112,8 @@ modeIcon.addEventListener('click', function () {
     select.classList.toggle('darkMode');
     cardsContainer.querySelectorAll('.card').forEach(card => {
         card.classList.toggle('darkMode');
-
-    })
+    });
+ modeText.textContent === 'Dark Mode' ? modeText.textContent = "Light Mode" : modeText.textContent = "Dark Mode"
 })
+
+
