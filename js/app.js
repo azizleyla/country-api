@@ -26,7 +26,7 @@ function updateUI(countries, className) {
 
         const formattedPopulation = population.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
         countryEl.innerHTML = `
-    
+    <a href="/country.html?name=${name}">
          <div class="card__img">
             <img src="${flag}">
          </div>
@@ -37,50 +37,11 @@ function updateUI(countries, className) {
              <p>Region: <span>${region}</span></p>
              <p>Capital: <span>${capital}</span></p>
           </div>
-         </div>`
+         </div></a>`
 
         cardsContainer.appendChild(countryEl);
 
-        countryEl.addEventListener('click', function (className) {
-            container.style.display = "none"
-            singleCountry.style.display = "block";
-            className = document.querySelector('body').classList.contains('darkMode') ? 'darkMode' : false;
-            let borderHTML = "";
-            for (var i = 0; i < 3; i++) {
-                if (borders[i] === undefined) {
-                    borderHTML = borderHTML;
 
-                } else {
-                    borderHTML = borderHTML + `<a href="#" class="border ${className}">${borders[i]}</a>`
-                }
-            }
-
-            singleCountry.innerHTML = `
-             <button class="btn ${className}"  onclick="back()"><i class="fas fa-arrow-left"></i>Back</button>
-              <div class="single-card__row"> 
-             <div class="single-card__img">
-            <img src="${flag}">
-             </div>
-          <div class="single-card__details">
-            <h1 class="single-card__name">${name}</h1>
-            <div class="single-card__details__flex">
-                <div class="single-card__details--left">
-                <p>Native Name: <span>${nativeName}</span>
-                    <p>Population: <span>${formattedPopulation}</span></p>
-                    <p>Region: <span>${region}</span></p>
-                    <p>Subregion: <span>${subregion}</span></p>
-                    <p>Capital: <span>${capital}</span></p>
-                </div>
-                <div class="single-card__details--right">
-                    <p>Top Level Domain: <span>${topLevelDomain}</span></p>
-                    <p>Currencies: <span>${currencies.map(x => x.code)}</span></p>
-                    <p>Languages: <span>${languages.map(language => language.name)}</span></p>
-                </div>
-            </div>
-            <p class="domain">Border Countries: <span class="borders">${borderHTML}</span ></p>
-        </div > 
-        </div>`
-        })
     })
 
 
